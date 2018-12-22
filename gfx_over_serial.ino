@@ -79,6 +79,18 @@ void ProcessBuffer() {
     case 0x09:
       DrawRect(sBuffer);
       break;
+    case 0x10:
+      DrawCircle(sBuffer);
+      break;
+    case 0x11:
+      //SrawCircleHelper(sBuffer);
+      break;
+    case 0x12:
+      FillCircle(sBuffer);
+      break;
+    case 0x13:
+      //FillCircleHelper(sBuffer);
+      break;
     default:
       // 0xfe: I don't understand
       Serial.println("fe");

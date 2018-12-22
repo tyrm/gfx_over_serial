@@ -1,3 +1,17 @@
+void DrawCircle(String s){
+  String XStr = s.substring(2, 4);
+  String YStr = s.substring(4, 6);
+  String RStr = s.substring(6, 8);
+  String CStr = s.substring(8, 12);
+  
+  int16_t XVal = StrHexToInt(XStr);
+  int16_t YVal = StrHexToInt(YStr);
+  int16_t RVal = StrHexToInt(RStr);
+  uint16_t CVal = StrHexToInt(CStr);
+  
+  Matrix.drawCircle(XVal, YVal, RVal, CVal);
+}
+
 void DrawFastHLine(String s){
   String XStr = s.substring(2, 4);
   String YStr = s.substring(4, 6);
@@ -68,6 +82,20 @@ void DrawRect(String s){
   uint16_t CVal = StrHexToInt(CStr);
   
   Matrix.drawRect(XVal, YVal, WVal, HVal, CVal);
+}
+
+void FillCircle(String s){
+  String XStr = s.substring(2, 4);
+  String YStr = s.substring(4, 6);
+  String RStr = s.substring(6, 8);
+  String CStr = s.substring(8, 12);
+  
+  int16_t XVal = StrHexToInt(XStr);
+  int16_t YVal = StrHexToInt(YStr);
+  int16_t RVal = StrHexToInt(RStr);
+  uint16_t CVal = StrHexToInt(CStr);
+  
+  Matrix.fillCircle(XVal, YVal, RVal, CVal);
 }
 
 void FillRect(String s){
