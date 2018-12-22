@@ -15,15 +15,15 @@ void DrawCircle(String s){
 void DrawFastHLine(String s){
   String XStr = s.substring(2, 4);
   String YStr = s.substring(4, 6);
-  String HStr = s.substring(6, 8);
+  String WStr = s.substring(6, 8);
   String CStr = s.substring(8, 12);
   
   int16_t XVal = StrHexToInt(XStr);
   int16_t YVal = StrHexToInt(YStr);
-  int16_t HVal = StrHexToInt(HStr);
+  int16_t WVal = StrHexToInt(WStr);
   uint16_t CVal = StrHexToInt(CStr);
   
-  Matrix.drawFastHLine(XVal, YVal, HVal, CVal);
+  Matrix.drawFastHLine(XVal, YVal, WVal, CVal);
 }
 
 void DrawFastVLine(String s){

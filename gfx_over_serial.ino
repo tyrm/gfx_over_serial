@@ -83,7 +83,7 @@ void ProcessBuffer() {
       DrawCircle(sBuffer);
       break;
     case 0x11:
-      //SrawCircleHelper(sBuffer);
+      //DrawCircleHelper(sBuffer);
       break;
     case 0x12:
       FillCircle(sBuffer);
