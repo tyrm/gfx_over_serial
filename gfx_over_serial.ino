@@ -91,6 +91,12 @@ void ProcessBuffer() {
     case 0x13:
       //FillCircleHelper(sBuffer);
       break;
+    case 0x14:
+      DrawTriangle(sBuffer);
+      break;
+    case 0x15:
+      FillTriangle(sBuffer);
+      break;
     default:
       // 0xfe: I don't understand
       Serial.println("fe");

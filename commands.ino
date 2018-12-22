@@ -84,6 +84,26 @@ void DrawRect(String s){
   Matrix.drawRect(XVal, YVal, WVal, HVal, CVal);
 }
 
+void DrawTriangle(String s){
+  String X0Str = s.substring(2, 4);
+  String Y0Str = s.substring(4, 6);
+  String X1Str = s.substring(6, 8);
+  String Y1Str = s.substring(8, 10);
+  String X2Str = s.substring(10, 12);
+  String Y2Str = s.substring(12, 14);
+  String CStr = s.substring(14, 18);
+  
+  int16_t X0Val = StrHexToInt(X0Str);
+  int16_t Y0Val = StrHexToInt(Y0Str);
+  int16_t X1Val = StrHexToInt(X1Str);
+  int16_t Y1Val = StrHexToInt(Y1Str);
+  int16_t X2Val = StrHexToInt(X2Str);
+  int16_t Y2Val = StrHexToInt(Y2Str);
+  uint16_t CVal = StrHexToInt(CStr);
+  
+  Matrix.drawTriangle(X0Val, Y0Val, X1Val, Y1Val, X2Val, Y2Val, CVal);
+}
+
 void FillCircle(String s){
   String XStr = s.substring(2, 4);
   String YStr = s.substring(4, 6);
@@ -119,6 +139,26 @@ void FillScreen(String s){
   uint16_t CVal = StrHexToInt(CStr);
   
   Matrix.fillScreen(CVal);
+}
+
+void FillTriangle(String s){
+  String X0Str = s.substring(2, 4);
+  String Y0Str = s.substring(4, 6);
+  String X1Str = s.substring(6, 8);
+  String Y1Str = s.substring(8, 10);
+  String X2Str = s.substring(10, 12);
+  String Y2Str = s.substring(12, 14);
+  String CStr = s.substring(14, 18);
+  
+  int16_t X0Val = StrHexToInt(X0Str);
+  int16_t Y0Val = StrHexToInt(Y0Str);
+  int16_t X1Val = StrHexToInt(X1Str);
+  int16_t Y1Val = StrHexToInt(Y1Str);
+  int16_t X2Val = StrHexToInt(X2Str);
+  int16_t Y2Val = StrHexToInt(Y2Str);
+  uint16_t CVal = StrHexToInt(CStr);
+  
+  Matrix.fillTriangle(X0Val, Y0Val, X1Val, Y1Val, X2Val, Y2Val, CVal);
 }
 
 void InvertDisplay(String s){
