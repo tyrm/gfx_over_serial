@@ -18,4 +18,8 @@ Turn an Arduino into a graphics card of sorts controlled by another host over se
 | 12 | xx | yy | rr | cc | cc |    |    |    | fillCircle                |
 | 13 |    |    |    |    |    |    |    |    | fillCircleHelper (Future) |
 | 14 | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | drawTriangle              |
-| 15 | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | drawTriangle              |
+| 15 | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | fillTriangle              |
+| 16 | xx | yy | cc | cc | bg | bg | ss | CC | drawChar                  |
+| 13 | xx | yy |    |    |    |    |    |    | setCursor                 |
+| 14 | cc | cc |    |    |    |    |    |    | setTextColor              |
+| 15 | cc | cc | bg | bg |    |    |    |    | setTextColor (With BG)    |

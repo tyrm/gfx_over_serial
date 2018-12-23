@@ -97,6 +97,18 @@ void ProcessBuffer() {
     case 0x15:
       FillTriangle(sBuffer);
       break;
+    case 0x16:
+      DrawChar(sBuffer);
+      break;
+    case 0x17:
+      SetCursor(sBuffer);
+      break;
+    case 0x18:
+      SetTextColor(sBuffer);
+      break;
+    case 0x19:
+      SetTextColorWBG(sBuffer);
+      break;
     default:
       // 0xfe: I don't understand
       Serial.println("fe");

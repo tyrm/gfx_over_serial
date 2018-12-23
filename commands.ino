@@ -1,3 +1,21 @@
+void DrawChar(String s){
+  String XStr = s.substring(2, 4);
+  String YStr = s.substring(4, 6);
+  String CStr = s.substring(6, 10);
+  String BStr = s.substring(10, 14);
+  String SStr = s.substring(14, 16);
+  String ChrStr = s.substring(14, 16);
+  
+  int16_t XVal = StrHexToInt(XStr);
+  int16_t YVal = StrHexToInt(YStr);
+  uint16_t CVal = StrHexToInt(CStr);
+  uint16_t BVal = StrHexToInt(BStr);
+  uint8_t SVal = StrHexToInt(SStr);
+  uint8_t ChrVal = StrHexToInt(ChrStr);
+  
+  Matrix.drawChar(XVal, YVal, char(ChrVal), CVal, BVal, SVal);
+}
+
 void DrawCircle(String s){
   String XStr = s.substring(2, 4);
   String YStr = s.substring(4, 6);
@@ -175,9 +193,55 @@ void InvertDisplay(String s){
   }
 }
 
+void SetCursor(String s){
+  String XStr = s.substring(2, 4);
+  String YStr = s.substring(4, 6);
+  
+  int16_t XVal = StrHexToInt(XStr);
+  int16_t YVal = StrHexToInt(YStr);
+  
+  Matrix.setCursor(XVal, YVal);
+}
+
 void SetRotation(String s){
   String RStr = s.substring(2, 4);
   int16_t RVal = StrHexToInt(RStr);
   
   Matrix.setRotation(RVal);
+}
+
+void SetTextColor(String s){
+  String CStr = s.substring(2, 6);
+  uint16_t CVal = StrHexToInt(CStr);
+  
+  Matrix.setTextColor(CVal);
+}
+
+void SetTextColorWBG(String s){
+  String CStr = s.substring(2, 6);
+  String BStr = s.substring(6, 10);
+  
+  uint16_t CVal = StrHexToInt(CStr);
+  uint16_t BVal = StrHexToInt(BStr);
+  
+  Matrix.setTextColor(CVal, BVal);
+}
+
+void SetTextSize(String s){
+  String SStr = s.substring(2, 4);
+  int16_t SVal = StrHexToInt(SStr);
+  
+  Matrix.setTextSize(SVal);
+}
+
+void setTextWrap(String s){
+  String WStr = s.substring(2, 4);
+  int16_t WVal = StrHexToInt(WStr);
+  
+  if (WVal == 0) {
+    Matrix.setTextWrap(false);
+  }
+  else {
+    Matrix.setTextWrap(true);
+  }
 }
