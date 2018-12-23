@@ -4,7 +4,7 @@ void DrawChar(String s){
   String CStr = s.substring(6, 10);
   String BStr = s.substring(10, 14);
   String SStr = s.substring(14, 16);
-  String ChrStr = s.substring(14, 16);
+  String ChrStr = s.substring(16, 18);
   
   int16_t XVal = StrHexToInt(XStr);
   int16_t YVal = StrHexToInt(YStr);
