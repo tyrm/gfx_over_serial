@@ -10,16 +10,16 @@ Turn an Arduino into a graphics card of sorts controlled by another host over se
 | 04 | xx | yy | hh | cc | cc |    |    |    | drawFastVLine             |
 | 05 | xx | yy | ww | cc | cc |    |    |    | drawFastHLine             |
 | 06 | xx | yy | ww | hh | cc | cc |    |    | fillRect                  |
-| 07 | xx | cc | cc |    |    |    |    |    | fillScreen                |
+| 07 | cc | cc |    |    |    |    |    |    | fillScreen                |
 | 08 | x0 | y0 | x1 | y1 | cc | cc |    |    | drawLine                  |
 | 09 | xx | yy | ww | hh | cc | cc |    |    | drawRect                  |
-| 10 | xx | yy | rr | cc | cc |    |    |    | drawCircle                |
-| 11 |    |    |    |    |    |    |    |    | drawCircleHelper (Future) |
-| 12 | xx | yy | rr | cc | cc |    |    |    | fillCircle                |
-| 13 |    |    |    |    |    |    |    |    | fillCircleHelper (Future) |
-| 14 | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | drawTriangle              |
-| 15 | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | fillTriangle              |
-| 16 | xx | yy | cc | cc | bg | bg | ss | CC | drawChar                  |
-| 13 | xx | yy |    |    |    |    |    |    | setCursor                 |
-| 14 | cc | cc |    |    |    |    |    |    | setTextColor              |
-| 15 | cc | cc | bg | bg |    |    |    |    | setTextColor (With BG)    |
+| 0a | xx | yy | rr | cc | cc |    |    |    | drawCircle                |
+| 0b |    |    |    |    |    |    |    |    | drawCircleHelper (Future) |
+| 0c | xx | yy | rr | cc | cc |    |    |    | fillCircle                |
+| 0d |    |    |    |    |    |    |    |    | fillCircleHelper (Future) |
+| 0e | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | drawTriangle              |
+| 0f | x0 | y0 | x1 | y1 | x2 | y2 | cc | cc | fillTriangle              |
+| 10 | xx | yy | cc | cc | bg | bg | ss | CC | drawChar                  |
+| 11 | xx | yy |    |    |    |    |    |    | setCursor                 |
+| 12 | cc | cc |    |    |    |    |    |    | setTextColor              |
+| 13 | cc | cc | bg | bg |    |    |    |    | setTextColor (With BG)    |

@@ -79,34 +79,34 @@ void ProcessBuffer() {
     case 0x09:
       DrawRect(sBuffer);
       break;
-    case 0x10:
+    case 0x0a:
       DrawCircle(sBuffer);
       break;
-    case 0x11:
+    case 0x0b:
       //DrawCircleHelper(sBuffer);
       break;
-    case 0x12:
+    case 0x0c:
       FillCircle(sBuffer);
       break;
-    case 0x13:
+    case 0x0d:
       //FillCircleHelper(sBuffer);
       break;
-    case 0x14:
+    case 0x0e:
       DrawTriangle(sBuffer);
       break;
-    case 0x15:
+    case 0x0f:
       FillTriangle(sBuffer);
       break;
-    case 0x16:
+    case 0x10:
       DrawChar(sBuffer);
       break;
-    case 0x17:
+    case 0x11:
       SetCursor(sBuffer);
       break;
-    case 0x18:
+    case 0x12:
       SetTextColor(sBuffer);
       break;
-    case 0x19:
+    case 0x13:
       SetTextColorWBG(sBuffer);
       break;
     default:
