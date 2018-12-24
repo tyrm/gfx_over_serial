@@ -109,6 +109,24 @@ void ProcessBuffer() {
     case 0x13:
       SetTextColorWBG(sBuffer);
       break;
+    case 0x14:
+      SetTextSize(sBuffer);
+      break;
+    case 0x15:
+      SetTextWrap(sBuffer);
+      break;
+    case 0x16:
+      Cp437(sBuffer);
+      break;
+    case 0x17:
+      Print(sBuffer);
+      break;
+    case 0x18:
+      PrintLN(sBuffer);
+      break;
+    case 0x19:
+      SetFont(sBuffer);
+      break;
     default:
       // 0xfe: I don't understand
       Serial.println("fe");
