@@ -53,7 +53,7 @@
 
 void Cp437(String s){
   String CStr = s.substring(2, 4);
-  int16_t CVal = StrHexToInt(CStr);
+  int16_t CVal = StrHexToUint(CStr);
   
   if (CVal == 0) {
     Matrix.cp437(false);
@@ -71,12 +71,12 @@ void DrawChar(String s){
   String SStr = s.substring(14, 16);
   String ChrStr = s.substring(16, 18);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  uint16_t CVal = StrHexToInt(CStr);
-  uint16_t BVal = StrHexToInt(BStr);
-  uint8_t SVal = StrHexToInt(SStr);
-  uint8_t ChrVal = StrHexToInt(ChrStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  uint16_t CVal = StrHexToUint(CStr);
+  uint16_t BVal = StrHexToUint(BStr);
+  uint8_t SVal = StrHexToUint(SStr);
+  uint8_t ChrVal = StrHexToUint(ChrStr);
   
   Matrix.drawChar(XVal, YVal, char(ChrVal), CVal, BVal, SVal);
 }
@@ -87,10 +87,10 @@ void DrawCircle(String s){
   String RStr = s.substring(6, 8);
   String CStr = s.substring(8, 12);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  int16_t RVal = StrHexToInt(RStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  int16_t RVal = StrHexToUint(RStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawCircle(XVal, YVal, RVal, CVal);
 }
@@ -101,10 +101,10 @@ void DrawFastHLine(String s){
   String WStr = s.substring(6, 8);
   String CStr = s.substring(8, 12);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  int16_t WVal = StrHexToInt(WStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  int16_t WVal = StrHexToUint(WStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawFastHLine(XVal, YVal, WVal, CVal);
 }
@@ -115,10 +115,10 @@ void DrawFastVLine(String s){
   String HStr = s.substring(6, 8);
   String CStr = s.substring(8, 12);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  int16_t HVal = StrHexToInt(HStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  int16_t HVal = StrHexToUint(HStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawFastVLine(XVal, YVal, HVal, CVal);
 }
@@ -130,11 +130,11 @@ void DrawLine(String s){
   String Y1Str = s.substring(8, 10);
   String CStr = s.substring(10, 14);
   
-  int16_t X0Val = StrHexToInt(X0Str);
-  int16_t Y0Val = StrHexToInt(Y0Str);
-  int16_t X1Val = StrHexToInt(X1Str);
-  int16_t Y1Val = StrHexToInt(Y1Str);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t X0Val = StrHexToUint(X0Str);
+  int16_t Y0Val = StrHexToUint(Y0Str);
+  int16_t X1Val = StrHexToUint(X1Str);
+  int16_t Y1Val = StrHexToUint(Y1Str);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawLine(X0Val, Y0Val, X1Val, Y1Val, CVal);
 }
@@ -144,9 +144,9 @@ void DrawPixel(String s){
   String YStr = s.substring(4, 6);
   String CStr = s.substring(6, 10);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawPixel(XVal, YVal, CVal);
 }
@@ -158,11 +158,11 @@ void DrawRect(String s){
   String HStr = s.substring(8, 10);
   String CStr = s.substring(10, 14);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  int16_t WVal = StrHexToInt(WStr);
-  int16_t HVal = StrHexToInt(HStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  int16_t WVal = StrHexToUint(WStr);
+  int16_t HVal = StrHexToUint(HStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawRect(XVal, YVal, WVal, HVal, CVal);
 }
@@ -176,13 +176,13 @@ void DrawTriangle(String s){
   String Y2Str = s.substring(12, 14);
   String CStr = s.substring(14, 18);
   
-  int16_t X0Val = StrHexToInt(X0Str);
-  int16_t Y0Val = StrHexToInt(Y0Str);
-  int16_t X1Val = StrHexToInt(X1Str);
-  int16_t Y1Val = StrHexToInt(Y1Str);
-  int16_t X2Val = StrHexToInt(X2Str);
-  int16_t Y2Val = StrHexToInt(Y2Str);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t X0Val = StrHexToUint(X0Str);
+  int16_t Y0Val = StrHexToUint(Y0Str);
+  int16_t X1Val = StrHexToUint(X1Str);
+  int16_t Y1Val = StrHexToUint(Y1Str);
+  int16_t X2Val = StrHexToUint(X2Str);
+  int16_t Y2Val = StrHexToUint(Y2Str);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawTriangle(X0Val, Y0Val, X1Val, Y1Val, X2Val, Y2Val, CVal);
 }
@@ -193,10 +193,10 @@ void FillCircle(String s){
   String RStr = s.substring(6, 8);
   String CStr = s.substring(8, 12);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  int16_t RVal = StrHexToInt(RStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  int16_t RVal = StrHexToUint(RStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.fillCircle(XVal, YVal, RVal, CVal);
 }
@@ -208,18 +208,18 @@ void FillRect(String s){
   String HStr = s.substring(8, 10);
   String CStr = s.substring(10, 14);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
-  int16_t WVal = StrHexToInt(WStr);
-  int16_t HVal = StrHexToInt(HStr);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
+  int16_t WVal = StrHexToUint(WStr);
+  int16_t HVal = StrHexToUint(HStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.fillRect(XVal, YVal, WVal, HVal, CVal);
 }
 
 void FillScreen(String s){
   String CStr = s.substring(2, 6);
-  uint16_t CVal = StrHexToInt(CStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.fillScreen(CVal);
 }
@@ -233,20 +233,20 @@ void FillTriangle(String s){
   String Y2Str = s.substring(12, 14);
   String CStr = s.substring(14, 18);
   
-  int16_t X0Val = StrHexToInt(X0Str);
-  int16_t Y0Val = StrHexToInt(Y0Str);
-  int16_t X1Val = StrHexToInt(X1Str);
-  int16_t Y1Val = StrHexToInt(Y1Str);
-  int16_t X2Val = StrHexToInt(X2Str);
-  int16_t Y2Val = StrHexToInt(Y2Str);
-  uint16_t CVal = StrHexToInt(CStr);
+  int16_t X0Val = StrHexToUint(X0Str);
+  int16_t Y0Val = StrHexToUint(Y0Str);
+  int16_t X1Val = StrHexToUint(X1Str);
+  int16_t Y1Val = StrHexToUint(Y1Str);
+  int16_t X2Val = StrHexToUint(X2Str);
+  int16_t Y2Val = StrHexToUint(Y2Str);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.fillTriangle(X0Val, Y0Val, X1Val, Y1Val, X2Val, Y2Val, CVal);
 }
 
 void InvertDisplay(String s){
   String IStr = s.substring(2, 4);
-  int16_t IVal = StrHexToInt(IStr);
+  int16_t IVal = StrHexToUint(IStr);
 
   if (IVal == 0) {
     Serial.println("Uninverting");
@@ -260,14 +260,14 @@ void InvertDisplay(String s){
 
 void Print(String s){
   String LStr = s.substring(2, 4);
-  int16_t LVal = StrHexToInt(LStr);
+  int16_t LVal = StrHexToUint(LStr);
 
   String str = "";
   str.reserve(255);
   
   for (int i=0; i < LVal; i++){
     String CStr = s.substring((2*i)+4, (2*i)+6);
-    int16_t CVal = StrHexToInt(CStr);
+    int16_t CVal = StrHexToUint(CStr);
     
     str += char(CVal);
   }
@@ -277,14 +277,14 @@ void Print(String s){
 
 void PrintLN(String s){
   String LStr = s.substring(2, 4);
-  int16_t LVal = StrHexToInt(LStr);
+  int16_t LVal = StrHexToUint(LStr);
 
   String str = "";
   str.reserve(255);
   
   for (int i=0; i < LVal; i++){
     String CStr = s.substring((2*i)+4, (2*i)+6);
-    int16_t CVal = StrHexToInt(CStr);
+    int16_t CVal = StrHexToUint(CStr);
     
     str += char(CVal);
   }
@@ -296,15 +296,15 @@ void SetCursor(String s){
   String XStr = s.substring(2, 4);
   String YStr = s.substring(4, 6);
   
-  int16_t XVal = StrHexToInt(XStr);
-  int16_t YVal = StrHexToInt(YStr);
+  int16_t XVal = StrHexToUint(XStr);
+  int16_t YVal = StrHexToUint(YStr);
   
   Matrix.setCursor(XVal, YVal);
 }
 
 void SetFont(String s){
   String FStr = s.substring(2, 4);
-  int16_t FVal = StrHexToInt(FStr);
+  int16_t FVal = StrHexToUint(FStr);
 
   switch(FVal) {
     case 0x00:
@@ -471,14 +471,14 @@ void SetFont(String s){
 
 void SetRotation(String s){
   String RStr = s.substring(2, 4);
-  int16_t RVal = StrHexToInt(RStr);
+  int16_t RVal = StrHexToUint(RStr);
   
   Matrix.setRotation(RVal);
 }
 
 void SetTextColor(String s){
   String CStr = s.substring(2, 6);
-  uint16_t CVal = StrHexToInt(CStr);
+  uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.setTextColor(CVal);
 }
@@ -487,22 +487,22 @@ void SetTextColorWBG(String s){
   String CStr = s.substring(2, 6);
   String BStr = s.substring(6, 10);
   
-  uint16_t CVal = StrHexToInt(CStr);
-  uint16_t BVal = StrHexToInt(BStr);
+  uint16_t CVal = StrHexToUint(CStr);
+  uint16_t BVal = StrHexToUint(BStr);
   
   Matrix.setTextColor(CVal, BVal);
 }
 
 void SetTextSize(String s){
   String SStr = s.substring(2, 4);
-  int16_t SVal = StrHexToInt(SStr);
+  int16_t SVal = StrHexToUint(SStr);
   
   Matrix.setTextSize(SVal);
 }
 
 void SetTextWrap(String s){
   String WStr = s.substring(2, 4);
-  int16_t WVal = StrHexToInt(WStr);
+  int16_t WVal = StrHexToUint(WStr);
   
   if (WVal == 0) {
     Matrix.setTextWrap(false);

@@ -49,7 +49,7 @@ String FormatHex8(uint8_t data) {
 
 void ProcessBuffer() {
   String command = sBuffer.substring(0, 2);
-  int commandVal = StrHexToInt(command);
+  int commandVal = StrHexToUint(command);
 
   switch(commandVal) {
     case 0x01:
@@ -136,7 +136,7 @@ void ProcessBuffer() {
   sBuffer = "";
 }
 
-int StrHexToInt(String str) {
+int StrHexToUint(String str) {
   int bufferSize = sizeof(str) + 1;
   char strBuffer[bufferSize];
   str.toCharArray(strBuffer, bufferSize);
