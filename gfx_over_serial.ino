@@ -16,7 +16,7 @@ RGBmatrixPanel Matrix(A, B, C, D, CLK, LAT, OE, false, 64, rgbpins);
 String sBuffer = "";
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(2000000);
   while (!Serial) {}
   
   sBuffer.reserve(255);
