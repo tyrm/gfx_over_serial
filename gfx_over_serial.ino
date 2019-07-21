@@ -143,3 +143,13 @@ int StrHexToUint(String str) {
   
   return (int) strtol(strBuffer, 0, 16);
 }
+
+int StrHexToInt(String str) {
+  int newInt = StrHexToUint(str);
+
+  if (newInt > 127) {
+    newInt = newInt - 256;
+  }
+  
+  return newInt;
+}
