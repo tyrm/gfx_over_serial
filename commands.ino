@@ -130,10 +130,10 @@ void DrawLine(String s){
   String Y1Str = s.substring(8, 10);
   String CStr = s.substring(10, 14);
   
-  int16_t X0Val = StrHexToUint(X0Str);
-  int16_t Y0Val = StrHexToUint(Y0Str);
-  int16_t X1Val = StrHexToUint(X1Str);
-  int16_t Y1Val = StrHexToUint(Y1Str);
+  int16_t X0Val = StrHexToInt(X0Str);
+  int16_t Y0Val = StrHexToInt(Y0Str);
+  int16_t X1Val = StrHexToInt(X1Str);
+  int16_t Y1Val = StrHexToInt(Y1Str);
   uint16_t CVal = StrHexToUint(CStr);
   
   Matrix.drawLine(X0Val, Y0Val, X1Val, Y1Val, CVal);
@@ -176,13 +176,13 @@ void DrawTriangle(String s){
   String Y2Str = s.substring(12, 14);
   String CStr = s.substring(14, 18);
   
-  int16_t X0Val = StrHexToUint(X0Str);
-  int16_t Y0Val = StrHexToUint(Y0Str);
-  int16_t X1Val = StrHexToUint(X1Str);
-  int16_t Y1Val = StrHexToUint(Y1Str);
-  int16_t X2Val = StrHexToUint(X2Str);
-  int16_t Y2Val = StrHexToUint(Y2Str);
-  uint16_t CVal = StrHexToUint(CStr);
+  int16_t X0Val = StrHexToInt(X0Str);
+  int16_t Y0Val = StrHexToInt(Y0Str);
+  int16_t X1Val = StrHexToInt(X1Str);
+  int16_t Y1Val = StrHexToInt(Y1Str);
+  int16_t X2Val = StrHexToInt(X2Str);
+  int16_t Y2Val = StrHexToInt(Y2Str);
+  uint16_t CVal = StrHexToInt(CStr);
   
   Matrix.drawTriangle(X0Val, Y0Val, X1Val, Y1Val, X2Val, Y2Val, CVal);
 }
@@ -233,13 +233,13 @@ void FillTriangle(String s){
   String Y2Str = s.substring(12, 14);
   String CStr = s.substring(14, 18);
   
-  int16_t X0Val = StrHexToUint(X0Str);
-  int16_t Y0Val = StrHexToUint(Y0Str);
-  int16_t X1Val = StrHexToUint(X1Str);
-  int16_t Y1Val = StrHexToUint(Y1Str);
-  int16_t X2Val = StrHexToUint(X2Str);
-  int16_t Y2Val = StrHexToUint(Y2Str);
-  uint16_t CVal = StrHexToUint(CStr);
+  int16_t X0Val = StrHexToInt(X0Str);
+  int16_t Y0Val = StrHexToInt(Y0Str);
+  int16_t X1Val = StrHexToInt(X1Str);
+  int16_t Y1Val = StrHexToInt(Y1Str);
+  int16_t X2Val = StrHexToInt(X2Str);
+  int16_t Y2Val = StrHexToInt(Y2Str);
+  uint16_t CVal = StrHexToInt(CStr);
   
   Matrix.fillTriangle(X0Val, Y0Val, X1Val, Y1Val, X2Val, Y2Val, CVal);
 }
