@@ -14,6 +14,7 @@ RGBmatrixPanel Matrix(A, B, C, D, CLK, LAT, OE, false, 64, rgbpins);
 
 // serial buffer 
 String sBuffer = "";
+bool debug = true;
 
 void setup() {
   Serial.begin(2000000);
@@ -134,6 +135,35 @@ void ProcessBuffer() {
   }
 
   sBuffer = "";
+}
+
+void StrHexToXY(String str, int16_t *x, int16_t *y) {
+  String XStr = str.substring(0, 3);
+  String YStr = str.substring(3, 6);
+
+  int xBufferSize = sizeof(XStr) + 1;
+  char xBufferStr[xBufferSize];
+  XStr.toCharArray(xBufferStr, xBufferSize);
+
+
+  int yBufferSize = sizeof(YStr) + 1;
+  char yBufferStr[xBufferSize];
+  YStr.toCharArray(yBufferStr, yBufferSize);
+
+  *x = (int16_t) strtol(xBufferStr, 0, 16);
+
+  if (*x > 2047) {
+    *x = *x - 4096;
+  }
+  
+  *y = (int16_t) strtol(yBufferStr, 0, 16);
+
+  if (*y > 2047) {
+    *y = *y - 4096;
+  }
+  
+  
+  return;
 }
 
 int StrHexToUint8(String str) {
