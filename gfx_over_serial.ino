@@ -18,7 +18,7 @@ bool debug = false;
 byte colorBuffer[4097];
 int colorBufferIdx = 0;
 
-int rxTimeout = 50;
+int rxTimeout = 20;
 long lastRun = 0;
 bool lastActionWrite = false;
 
